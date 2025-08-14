@@ -127,7 +127,7 @@ fn help(args: Vec<&str>) {
     ]);
 
     if args.len() > 1 {
-        match args[1] {
+        match args[1].trim() {
             "add" => {println!("{}", info["add"]); let _ = std::io::stdin().read_line(&mut String::new()); return},
             "edit" => {println!("{}", info["edit"]); let _ = std::io::stdin().read_line(&mut String::new()); return},
             "delete" => {println!("{}", info["delete"]); let _ = std::io::stdin().read_line(&mut String::new()); return},
